@@ -1,5 +1,6 @@
 image:
 - Visual Studio 2017
+- macos
 - Ubuntu
 
 for:
@@ -7,13 +8,19 @@ for:
     only:
     - image: Visual Studio 2017
   environment:
-    windows: Windows
+    CI_TESTING_WINDOWS: Windows
+
+- matrix:
+    only:
+    - image: macos
+  environment:
+    CI_TESTING_MAC: macOS
 
 - matrix:
     only:
     - image: Ubuntu
   environment:
-    linux: Linux
+    CI_TESTING_LINUX: Linux
 
 install:
 - npm install
