@@ -1,4 +1,8 @@
-stack: node 12
+environment:
+  matrix: 
+  - image: Visual Studio 2019
+  - image: macos
+  - image: Ubuntu
 
 install:
 - npm install
