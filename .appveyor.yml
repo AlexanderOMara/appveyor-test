@@ -1,8 +1,7 @@
-environment:
-  matrix: 
-  - image: Visual Studio 2019
-  - image: macos
-  - image: Ubuntu
+matrix: 
+- image: Visual Studio 2019
+- image: macos
+- image: Ubuntu
 
 install:
 - npm install
