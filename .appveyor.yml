@@ -11,21 +11,21 @@ for:
 - matrix:
     only:
     - environment:
-        MY_BUILD: build-a
+      - MY_BUILD: build-a
   environment:
     CI_TESTING_BUILD: A
 
 - matrix:
     only:
     - environment:
-        MY_BUILD: build-b
+      - MY_BUILD: build-b
   environment:
     CI_TESTING_BUILD: B
 
 - matrix:
     only:
     - environment:
-        MY_BUILD: build-c
+      - MY_BUILD: build-c
   environment:
     CI_TESTING_BUILD: C
 
