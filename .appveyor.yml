@@ -1,3 +1,5 @@
+stack: node 12
+
 install:
 - npm install
 
