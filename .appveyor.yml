@@ -4,14 +4,14 @@ image:
 
 for:
 - matrix:
-  only:
-  - image: Visual Studio 2017
+    only:
+    - image: Visual Studio 2017
   environment:
     windows: Windows
 
 - matrix:
-  only:
-  - image: Ubuntu
+    only:
+    - image: Ubuntu
   environment:
     linux: Linux
 
