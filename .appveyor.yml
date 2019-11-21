@@ -10,21 +10,21 @@ image:
 for:
 - matrix:
     only:
-      environment:
+    - environment:
         MY_BUILD: build-a
   environment:
     CI_TESTING_BUILD: A
 
 - matrix:
     only:
-      environment:
+    - environment:
         MY_BUILD: build-b
   environment:
     CI_TESTING_BUILD: B
 
 - matrix:
     only:
-      environment:
+    - environment:
         MY_BUILD: build-c
   environment:
     CI_TESTING_BUILD: C
