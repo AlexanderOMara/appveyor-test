@@ -1,13 +1,7 @@
-mybuilds:
+configuration:
 - build-a
 - build-b
 - build-c
-
-# environment:
-#   matrix:
-#   - MY_BUILD: build-a
-#   - MY_BUILD: build-b
-#   - MY_BUILD: build-c
 
 image:
 - Ubuntu
@@ -15,19 +9,19 @@ image:
 for:
 - matrix:
     only:
-    - mybuilds: build-a
+    - configuration: build-a
   environment:
     CI_TESTING_BUILD: A
 
 - matrix:
     only:
-    - mybuilds: build-b
+    - configuration: build-b
   environment:
     CI_TESTING_BUILD: B
 
 - matrix:
     only:
-    - mybuilds: build-c
+    - configuration: build-c
   environment:
     CI_TESTING_BUILD: C
 
