@@ -1,7 +1,19 @@
-environment:
-  matrix: 
-  - vsversion: 2013
-  - vsversion: 2015
+image:
+- Visual Studio 2017
+- Ubuntu
+
+for:
+- matrix:
+  only:
+  - image: Visual Studio 2017
+  environment:
+    windows: Windows
+
+- matrix:
+  only:
+  - image: Ubuntu
+  environment:
+    linux: Linux
 
 install:
 - npm install
