@@ -1,7 +1,7 @@
-matrix: 
-- image: Visual Studio 2019
-- image: macos
-- image: Ubuntu
+environment:
+  matrix: 
+  - vsversion: 2013
+  - vsversion: 2015
 
 install:
 - npm install
