@@ -1,29 +1,43 @@
 configuration:
-- build-a
-- build-b
-- build-c
-
-image:
-- Ubuntu
+- build-linux-1
+- build-linux-2
+- build-macos
+- build-windows
 
 for:
 - matrix:
     only:
-    - configuration: build-a
+    - configuration: build-linux-1
+  image:
+  - Ubuntu
   environment:
-    CI_TESTING_BUILD: A
+    CI_TESTING_LINUX: Linux
+    CI_TESTING_NUMBER: 1
 
 - matrix:
     only:
-    - configuration: build-b
+    - configuration: build-linux-2
+  image:
+  - Ubuntu
   environment:
-    CI_TESTING_BUILD: B
+    CI_TESTING_LINUX: Linux
+    CI_TESTING_NUMBER: 2
 
 - matrix:
     only:
-    - configuration: build-c
+    - configuration: build-macos
+  image:
+  - macos
   environment:
-    CI_TESTING_BUILD: C
+    CI_TESTING_MAC: macos
+
+- matrix:
+    only:
+    - configuration: build-windows
+  image:
+  - Visual Studio 2017
+  environment:
+    CI_TESTING_WINDOWS: Windows
 
 install:
 - npm install
