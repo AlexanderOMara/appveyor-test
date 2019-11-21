@@ -1,32 +1,33 @@
+environment:
+  matrix:
+  - MY_BUILD: build-a
+  - MY_BUILD: build-b
+  - MY_BUILD: build-c
+
 image:
-- Visual Studio 2017
-- macos
 - Ubuntu
 
 for:
 - matrix:
     only:
-    - image: Visual Studio 2017
+      environment:
+        MY_BUILD: build-a
   environment:
-    CI_TESTING_WINDOWS: Windows
+    CI_TESTING_BUILD: A
 
 - matrix:
     only:
-    - image: macos
+      environment:
+        MY_BUILD: build-b
   environment:
-    CI_TESTING_MAC: macOS
+    CI_TESTING_BUILD: B
 
 - matrix:
     only:
-    - image: Ubuntu
+      environment:
+        MY_BUILD: build-c
   environment:
-    CI_TESTING_LINUX: Linux
-
-- matrix:
-    only:
-    - image: Ubuntu
-  environment:
-    CI_TESTING_LINUX: Linux_2
+    CI_TESTING_BUILD: C
 
 install:
 - npm install
