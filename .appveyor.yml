@@ -4,16 +4,11 @@ configuration:
 - build-macos
 - build-windows
 
-image:
-- Ubuntu
-- macos
-- Visual Studio 2017
-
 for:
 - matrix:
     only:
     - configuration: build-linux-1
-    - image: Ubuntu
+  image: Ubuntu
   environment:
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 1
@@ -21,7 +16,7 @@ for:
 - matrix:
     only:
     - configuration: build-linux-2
-    - image: Ubuntu
+  image: Ubuntu
   environment:
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 2
@@ -29,14 +24,14 @@ for:
 - matrix:
     only:
     - configuration: build-macos
-    - image: macos
+  image: macos
   environment:
     CI_TESTING_MAC: macos
 
 - matrix:
     only:
     - configuration: build-windows
-    - image: Visual Studio 2017
+  image: Visual Studio 2017
   environment:
     CI_TESTING_WINDOWS: Windows
 
