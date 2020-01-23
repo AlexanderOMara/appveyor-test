@@ -8,35 +8,31 @@ for:
 - matrix:
     only:
     - configuration: build-linux-1
-  image: Ubuntu
   environment:
-    appveyor_build_worker_image: Ubuntu
+    APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 1
 
 - matrix:
     only:
     - configuration: build-linux-2
-  image: Ubuntu
   environment:
-    appveyor_build_worker_image: Ubuntu
+    APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 2
 
 - matrix:
     only:
     - configuration: build-macos
-  image: macos
   environment:
-    appveyor_build_worker_image: macos
+    APPVEYOR_BUILD_WORKER_IMAGE: macos
     CI_TESTING_MAC: macos
 
 - matrix:
     only:
     - configuration: build-windows
-  image: Visual Studio 2017
   environment:
-    appveyor_build_worker_image: Windows
+    APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     CI_TESTING_WINDOWS: Windows
 
 install:
