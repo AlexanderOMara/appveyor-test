@@ -1,36 +1,22 @@
-configuration:
-- build-linux-1
-- build-linux-2
-- build-macos
-- build-windows
-
-for:
+environment:
 - matrix:
-    only:
-    - configuration: build-linux-1
   appveyor_build_worker_image: Ubuntu
   environment:
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 1
 
 - matrix:
-    only:
-    - configuration: build-linux-2
   appveyor_build_worker_image: Ubuntu
   environment:
     CI_TESTING_LINUX: Linux
     CI_TESTING_NUMBER: 2
 
 - matrix:
-    only:
-    - configuration: build-macos
   appveyor_build_worker_image: macos
   environment:
     CI_TESTING_MAC: macos
 
 - matrix:
-    only:
-    - configuration: build-windows
   appveyor_build_worker_image: Visual Studio 2017
   environment:
     CI_TESTING_WINDOWS: Windows
